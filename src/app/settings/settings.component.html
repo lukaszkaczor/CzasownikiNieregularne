@@ -1,0 +1,51 @@
+<form [formGroup]="form">
+  <div class="form-content">
+
+    <h1 class="caption">Zakres słówek</h1>
+    <div class="input-group">
+      <div class="input-box">
+        <input type="radio" name="range" id="firstHalf" formControlName="range" value="1"
+          />
+        <label for="firstHalf"> Pierwsza połowa </label>
+      </div>
+
+      <div class="input-box">
+        <input type="radio" name="range" id="secondHalf" formControlName="range" value="2"
+          />
+        <label for="secondHalf"> Druga połowa </label>
+      </div>
+      <div class="input-box">
+        <input type="radio" name="range" id="all" formControlName="range" value="3" />
+        <label for="all"> Wszystko </label>
+      </div>
+    </div>
+
+    <!-- <h1 class="caption">Ustawienia</h1> -->
+
+    <div class="input-group">
+
+      <div class="input-box">
+        <input class="number-input" type="number" name="wordsCount" id="wordsCount" formControlName="wordsCount" min="0">
+        <label for="wordsCount">Ilość słówek</label>
+      </div>
+      <!-- <div class="input-box">
+        <input type="radio" name="difficulty" id="difficulty-easy" formControlName="difficulty" value="1"/>
+        <label for="difficulty-easy"> Łatwy </label>
+      </div>
+
+      <div class="input-box">
+        <input type="radio" name="difficulty" id="difficulty-hard" formControlName="difficulty" value="2" />
+        <label for="difficulty-hard"> Trudny </label>
+      </div>
+
+      <div class="input-group">
+        <div class="input-box">
+          <input class="number-input" type="number" name="wordsCount" id="wordsCount" formControlName="wordsCount" min="0">
+          <label for="wordsCount">Ilość słówek (0 - wszystkie)</label>
+        </div>
+      </div> -->
+    </div>
+
+    <button class="start-btn" (click)="onSubmit($event)">Start</button>
+  </div>
+</form>
